@@ -10,6 +10,27 @@ const localStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.light,
   },
+  headerProfile: {
+    padding: 10,
+    flexDirection: 'row',
+  },
+  infoContainer: {
+    flex: 1,
+    paddingHorizontal: 20,
+    height: 64,
+    justifyContent: 'center',
+  },
+  infoText: {
+    fontSize: 20,
+    color: '#FFFFFF',
+  },
+  avatar: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
+  }
 });
 export default {
   ...globalStyles,

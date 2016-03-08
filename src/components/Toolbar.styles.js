@@ -7,7 +7,7 @@ import theme from '../theme.js';
 
 const localStyles = StyleSheet.create({
   toolbar: {
-    backgroundColor: theme.primary,
+    backgroundColor: theme.dark,
     height: 56,
   },
 });
