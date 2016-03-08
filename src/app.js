@@ -8,7 +8,7 @@ import React, {
   Navigator,
 } from 'react-native';
 
-import Splash from './pages/Splash';
+import Index from './pages/Index';
 
 class App extends React.Component {
   componentWillMount() {
@@ -31,7 +31,10 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: Splash,
+    component: Index,
+    params: {
+      title: '首页',
+    }
   };
   configureScene() {
     if (Platform.OS === 'ios') {

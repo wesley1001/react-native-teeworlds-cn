@@ -9,8 +9,10 @@ import styles from './DrawerNavigation.styles';
 class DrawerNavigation extends React.Component {
   render() {
     return(
-      <View style={styles.centerContainer}>
+      <View style={styles.container}>
       </View>
     )
   }
 }
+
+export default DrawerNavigation

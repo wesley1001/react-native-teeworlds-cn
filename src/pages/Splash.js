@@ -17,7 +17,7 @@ const SplashImages = [
 class Splash extends React.Component {
   splashImage = SplashImages[parseInt(5*Math.random())];
   render() {
-    return (
+    return(
       <View style={styles.centerContainer}>
         <View style={styles.splash}>
           <Image style={styles.splashImage} source={this.splashImage} />
