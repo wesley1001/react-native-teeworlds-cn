@@ -3,6 +3,7 @@ import React, {
 } from 'react-native';
 
 import styles from './Toolbar.styles';
+import * as icons from '../icons'
 
 class DrawerNavigation extends React.Component {
   render() {
@@ -10,6 +11,8 @@ class DrawerNavigation extends React.Component {
       <ToolbarAndroid
         title={this.props.title}
         titleColor={'#FFFFFF'}
+        navIcon={this.props.navIcon}
+        onIconClicked={this.props.onIconClicked}
         subtitle={this.props.subtitle}
         subtitleColor={this.props.subtitleColor}
         style={styles.toolbar} />

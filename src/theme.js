@@ -61,4 +61,4 @@ export const Orange = {
   divider: '#B6B6B6',
 }
 
-export default Orange
+export default DeepOrange

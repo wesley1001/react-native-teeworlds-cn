@@ -14,9 +14,9 @@ class Index extends React.Component {
   render() {
     return(
       <DrawerLayoutAndroid
-        drawerWidth={300}
+        drawerWidth={250}
         drawerPosition={DrawerLayoutAndroid.positions.Left}
-        renderNavigationView={() => DrawerNavigation}>
+        renderNavigationView={() => <DrawerNavigation />}>
         <View style={styles.container}>
           <Toolbar title={this.props.title} />
           <View style={styles.content}>

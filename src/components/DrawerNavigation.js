@@ -9,7 +9,8 @@ import styles from './DrawerNavigation.styles';
 class DrawerNavigation extends React.Component {
   render() {
     return(
-      <View style={styles.container}>
+      <View style={styles.navigationView}>
+        <Text>Test!</Text>
       </View>
     )
   }
