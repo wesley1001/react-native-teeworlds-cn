@@ -15,7 +15,7 @@ const localStyles = StyleSheet.create({
   //   padding: 10,
   // },
   splashText: {
-    fontSize: 20,
+    fontSize: 15,
   },
   splashImage: {
     width: 103,
