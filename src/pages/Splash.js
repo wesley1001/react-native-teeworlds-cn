@@ -14,8 +14,7 @@ const SplashImages = [
   require('../assets/splash/splashtee5.png'),
 ];
 
-
-export default class Splash extends React.Component {
+class Splash extends React.Component {
   splashImage = SplashImages[parseInt(5*Math.random())];
   render() {
     return (
@@ -28,3 +27,5 @@ export default class Splash extends React.Component {
     );
   }
 }
+
+export default Splash
