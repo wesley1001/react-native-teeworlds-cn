@@ -12,6 +12,7 @@ const localStyles = StyleSheet.create({
   },
   headerProfile: {
     padding: 10,
+    backgroundColor: theme.primary,
     flexDirection: 'row',
   },
   infoContainer: {
