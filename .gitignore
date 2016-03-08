@@ -36,3 +36,4 @@ npm-debug.log
 
 # origin app file
 app_origin/
+start.sh
