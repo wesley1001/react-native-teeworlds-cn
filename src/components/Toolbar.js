@@ -5,7 +5,7 @@ import React, {
 import styles from './Toolbar.styles';
 import * as icons from '../icons'
 
-class DrawerNavigation extends React.Component {
+class Toolbar extends React.Component {
   render() {
     return(
 
@@ -13,4 +13,4 @@ class DrawerNavigation extends React.Component {
   }
 }
 
-export default DrawerNavigation
+export default Toolbar
