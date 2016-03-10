@@ -61,4 +61,8 @@ export const Orange = {
   divider: '#B6B6B6',
 }
 
-export default DeepOrange
+export const Pinbo = {
+  toolbar: '#D24D48',
+}
+
+export default Pinbo
