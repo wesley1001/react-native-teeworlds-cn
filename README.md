@@ -1,2 +1,2 @@
-# react-native-teeworlds-cn
+# Description
 TeeworldsCN App
