@@ -7,47 +7,73 @@ import theme from '../theme.js';
 
 const localStyles = StyleSheet.create({
   toolbar: {
-    //backgroundColor: theme.dark,
-    //flex: 1,
-    alignItems: 'center',
-    //justifyContent: 'center',
-    paddingHorizontal: 16,
     flexDirection: 'row',
-    backgroundColor: theme.toolbar,
-    height: 154 / 3,
+    alignItems: 'center',
+    //paddingHorizontal: 32,
+    //justifyContent: 'center',
+    backgroundColor: theme.toolbar ? theme.toolbar : theme.dark,
+    height: 56,
   },
-  title: {
-    flex: 6,
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 15,
+  left: {
+    flex: 3,
+    //alignItems: 'flex-end',
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
+  right: {
+    flex: 3,
+    alignItems: 'flex-end',
+    alignSelf: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    //flexWrap: 'nowrap',
+  },
+  center: {
+    flex: 4,
+    //alignItems: 'center',
+    //alignSelf: 'center',
+    //justifyContent: 'center',
+  },
+  inner: {
+    flex: 1,
+    height: 56,
+    alignItems: 'center',
+    flexWrap: 'nowrap',
+    flexDirection: 'row',
   },
   avatarContainer: {
-    flex: 2,
-    flexDirection: 'row',
-    //alignItems: 'center',
-    //justifyContent: 'center'
+    flex: 1,
+    alignItems: 'center',
   },
   avatar: {
-    flexDirection: 'row',
-    alignItems: 'center',
     width: 24,
     height: 24,
   },
-  actionContainer: {
-    flex: 2,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
+  title: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 18,
   },
-  actionButton: {
-    marginLeft: 10,
+  button: {
+    //flex: 1,
+    height: 40,
+    width: 40,
   },
-  actionImage: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    width: 24,
+  navButton: {
+    height: 56,
+    width: 56,
+  },
+  navIcon: {
+    margin: 16,
     height: 24,
+    width: 24,
+  },
+  buttonImage: {
+    margin: 8,
+    //marginVertical: 16,
+    //marginHorizontal: 8,
+    height: 24,
+    width: 24,
   }
 });
 export default {
