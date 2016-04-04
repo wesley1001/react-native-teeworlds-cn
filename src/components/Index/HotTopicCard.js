@@ -13,7 +13,7 @@ class HotTopicCard extends React.Component {
       <View style={styles.container}>
         <View style={styles.avatar}>
 			<AvatarCircle avatar={this.props.avatar} size={48} />
-        </View> 
+        </View>
 		<View style={styles.right>
 			<View style={styles.header}>
 				<Text>{this.props.title}</Text>
