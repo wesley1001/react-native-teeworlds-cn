@@ -36,3 +36,9 @@ npm-debug.log
 # origin app file
 app_origin/
 start.sh
+
+# assets
+assets_origin/
+
+# hot update
+.update

@@ -11,25 +11,31 @@ class HotTopicCard extends React.Component {
   render() {
     return(
       <View style={styles.container}>
-        <View style={styles.avatar}>
-			<AvatarCircle avatar={this.props.avatar} size={48} />
+        <View style={styles.inner}>
+          <View style={styles.avatar}>
+            <AvatarCircle size={this.props.avatarSize} avatar={this.props.avatar} />
+          </View>
+          <View style={styles.right}>
+            <View style={styles.header}>
+              <Text style={styles.title} numberOfLines={1}>{this.props.title}</Text>
+            </View>
+            <View style={styles.footer}>
+              <View style={styles.info}>
+                <Text style={styles.infoText}>{this.props.author}</Text>
+                <Text style={styles.infoText}>|</Text>
+                <Text style={styles.infoText}>{this.props.date}</Text>
+              </View>
+              <View style={styles.count}>
+                <View style={styles.viewCount}>
+                  {this.props.viewCount}
+                </View>
+                <View style={styles.replyCount}>
+                  {this.props.replyCount}
+                </View>
+              </View>
+            </View>
+          </View>
         </View>
-		<View style={styles.right>
-			<View style={styles.header}>
-				<Text>{this.props.title}</Text>
-			</View>
-			<View style={styles.footer}>
-				<Text style={styles.footerText}>{this.props.username}</Text>
-				<Text style={styles.footerText}>|</Text>
-				<Text style={styles.footerText}>{this.props.date}</Text>
-				<View style={styles.topicInfoContainer}>
-					<View style={styles.topicInfo}>
-					</View>
-					<View style={styles.replyCount}>
-					</View>
-				</View>
-			</View>
-		</View>
       </View>
     )
 

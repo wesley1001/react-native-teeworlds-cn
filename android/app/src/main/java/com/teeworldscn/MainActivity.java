@@ -1,14 +1,20 @@
 package com.teeworldscn;
 
 import com.facebook.react.ReactActivity;
+import cn.reactnative.modules.update.UpdatePackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
+import cn.reactnative.modules.update.UpdateContext;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends ReactActivity {
-
+    /** Hot update **/
+    @Override
+    protected String getJSBundleFile() {
+        return UpdateContext.getBundleUrl(this);
+    }
     /**
      * Returns the name of the main component registered from JavaScript.
      * This is used to schedule rendering of the component.
@@ -34,7 +40,8 @@ public class MainActivity extends ReactActivity {
     @Override
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
-            new MainReactPackage()
+            new MainReactPackage(),
+            new UpdatePackage()
         );
     }
 }
