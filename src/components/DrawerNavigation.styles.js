@@ -8,10 +8,10 @@ import theme from '../theme.js';
 const localStyles = StyleSheet.create({
   navigationView: {
     flex: 1,
-    backgroundColor: theme.light,
+    backgroundColor: 'white',
   },
   headerProfile: {
-    padding: 10,
+    padding: 20,
     backgroundColor: theme.primary,
     flexDirection: 'row',
   },
@@ -23,14 +23,15 @@ const localStyles = StyleSheet.create({
   },
   infoText: {
     fontSize: 20,
-    color: '#FFFFFF',
+    color: 'white',
+  },
+  avatarContainer: {
+    borderRadius: 32,
+    backgroundColor: 'white'
   },
   avatar: {
     width: 64,
     height: 64,
-    borderRadius: 32,
-    borderWidth: 2,
-    borderColor: '#FFFFFF',
   }
 });
 export default {

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.teeworlds.bbs">
+    package="com.teeworldscn">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

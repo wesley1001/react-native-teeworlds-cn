@@ -32,8 +32,13 @@ local.properties
 #
 node_modules/
 npm-debug.log
-*.iml
 
 # origin app file
 app_origin/
 start.sh
+
+# assets
+assets_origin/
+
+# hot update
+.update

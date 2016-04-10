@@ -14,7 +14,7 @@ class DrawerNavigation extends React.Component {
         <View style={styles.header}>
           <View style={styles.headerProfile}>
             <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={require('../assets/splash/splashtee0.png')} />
+              <Image style={styles.avatar} source={require('../assets/950.jpg')} />
             </View>
             <View style={styles.infoContainer}>
               <Text style={styles.infoText}>ysc</Text>

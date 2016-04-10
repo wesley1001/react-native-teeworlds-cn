@@ -9,6 +9,7 @@ import React, {
 } from 'react-native';
 
 import Index from './pages/Index';
+import Splash from './pages/Splash';
 
 class App extends React.Component {
   componentWillMount() {
@@ -31,7 +32,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: Index,
+    component: Splash,
     params: {
       title: '首页',
     }
