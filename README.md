@@ -1,3 +1,4 @@
 # react-native-teeworlds-cn
 TeeworldsCN App
-Design and styles from Pinbo
+
+Design and styles were powered by Pinbo
