@@ -1,10 +1,17 @@
 import { createAction, handleActions } from 'redux-actions';
 
+import Colors from '../../theme';
 // Action types;
 export const INITIAL_OVER = 'app/session/initial_over';
 
 // Initial state
-const initialState = null;
+const initialState = {
+  appVersion: 'v0.1 Alpha',
+  theme: Colors[0],
+  options: {
+    notifications: true,
+  }
+};
 
 // reducer
 const reducer = handleActions({

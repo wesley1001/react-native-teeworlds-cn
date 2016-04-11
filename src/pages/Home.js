@@ -7,24 +7,17 @@ import React, {
   View,
 } from 'react-native';
 
-import styles from './Index.styles';
-import DrawerNavigation from '../components/DrawerNavigation.js';
+import styles from './Home.styles';
 import Toolbar from '../components/Toolbar.js';
 import AvatarCircle from '../components/AvatarCircle';
-import HotTopicCard from '../components/Index/HotTopicCard';
-import * as icons from '../icons';
+import HotTopicCard from '../components/Home/HotTopicCard';
 import * as API from '../api';
-const defaultAvatar = require('../assets/md_icons/toolbar/person/person.png');
-const menu = require('../assets/md_icons/menu/menu.png');
 const testAvatar = require('../assets/950.jpg');
 import { ToolbarIcons } from '../icons';
-var toolbarActions = [
-  {title: 'Notifications', icon: ToolbarIcons.notifications},
-  {title: 'Search', icon: ToolbarIcons.search},
-];
+import Router from '../router';
 
 
-class Index extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,6 +28,12 @@ class Index extends React.Component {
       done: false,
     };
   }
+
+  toolbarActions = [
+    {name: 'Search', icon: ToolbarIcons.search,},
+    {name: 'Settings', icon: ToolbarIcons.settings, callback: this.goSettings},
+  ];
+
   componentDidMount() {
     this.loadingNext();
   }
@@ -68,16 +67,21 @@ class Index extends React.Component {
         avatarSize={48}
         title={topic.title}
         author={topic.user_nick_name}
-        date={date.toLocaleDateString()}/>
+        date={date.toCustomString()}/>
     );
   }
+
+  goSettings() {
+    Router.gotoPage(Router.pages.Settings);
+  }
+
   render() {
     return(
       <View style={styles.container}>
         <Toolbar
           title={this.props.title}
           renderLeft={this.renderAvatar.bind(this)}
-          actions={toolbarActions} />
+          actions={this.toolbarActions} />
         <ListView
           style={styles.listView}
           dataSource={this.state.topics}
@@ -91,4 +95,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index
+export default Home

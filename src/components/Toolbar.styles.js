@@ -11,7 +11,7 @@ const localStyles = StyleSheet.create({
     alignItems: 'center',
     //paddingHorizontal: 32,
     //justifyContent: 'center',
-    backgroundColor: theme.toolbar ? theme.toolbar : theme.dark,
+    backgroundColor: theme.toolbar ? theme.toolbar : theme[0].color,
     height: 56,
   },
   left: {

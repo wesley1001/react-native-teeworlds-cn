@@ -7,6 +7,8 @@ import React, {
 
 import styles from './Splash.styles';
 const SplashImage = require('../assets/splash/splash.png');
+import Router from '../router';
+import pages from '../pages';
 // const SplashImages = [
 //   require('../assets/splash/splashtee0.png'),
 //   require('../assets/splash/splashtee1.png'),
@@ -24,6 +26,12 @@ class Splash extends React.Component {
       // iconSize: new Animated.Value(20),
       // textOpacity: new Animated.Value(0),
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      Router.replace(Router.pages.Home)
+    } , 5000);
   }
   // componentDidMount() {
   //   Animated.parallel([

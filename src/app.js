@@ -1,3 +1,4 @@
+require('./init');
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
@@ -8,10 +9,46 @@ import React, {
   Navigator,
 } from 'react-native';
 
-import Index from './pages/Index';
-import Splash from './pages/Splash';
+import CustomSceneConfigs from './sceneConfig';
+import Router from './router';
 
-class App extends React.Component {
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    if (!App.instance) {
+        App.instance = this;
+    }
+  }
+
+  static getInstance() {
+      return App.instance;
+  }
+
+  push(router) {
+      this.navigator.push(router);
+  }
+  pop(num = 1) {
+      const nav = this.navigator;
+      const routes = nav.getCurrentRoutes();
+      if (num === 1) {
+          nav.pop();
+      }
+      else {
+          if (routes.length > num) {
+              nav.popToRoute(routes[routes.length-1-num])
+          }
+      }
+  }
+  popToRoot () {
+      const nav = this.navigator;
+      const routes = nav.getCurrentRoutes()
+      if (routes.length > 1) {
+          nav.popToRoute(routes[0])
+      }
+  }
+  replace(page) {
+      this.navigator.replace(page);
+  }
   componentWillMount() {
     if (Platform.OS === 'android') {
       BackAndroid.addEventListener('hardwareBackPress', this.onBackAndroid);
@@ -31,17 +68,14 @@ class App extends React.Component {
     }
     return false;
   };
-  initialRoute = {
-    component: Splash,
-    params: {
-      title: '首页',
-    }
-  };
+  initialRoute = Router.pages.Splash;
   configureScene() {
-    if (Platform.OS === 'ios') {
-      return Navigator.SceneConfigs.PushFromRight;
-    }
-    return Navigator.SceneConfigs.FloatFromBottomAndroid;
+    //return Navigator.SceneConfigs.FloatFromRight;
+    // if (Platform.OS === 'ios') {
+    //   return Navigator.SceneConfigs.PushFromRight;
+    // }
+    // return Navigator.SceneConfigs.FloatFromBottomAndroid;
+    return CustomSceneConfigs.PushFromRight;
   }
   renderScene(route, navigator) {
     const Component = route.component;
