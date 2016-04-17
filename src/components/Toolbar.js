@@ -7,11 +7,13 @@ import React, {
 } from 'react-native';
 
 import styles from './Toolbar.styles';
+import { connect } from 'react-redux';
 
 class Toolbar extends React.Component {
   render() {
+    const { theme } = this.props;
     return(
-      <View style={styles.toolbar}>
+      <View style={[styles.toolbar, { backgroundColor: theme.color }]}>
         <View style={styles.left}>
           {this.props.renderLeft ? this.props.renderLeft() : (this.props.navIcon && this.props.onIconClicked ?
               <TouchableOpacity style={styles.navButton} onPress={this.props.onIconClicked}>
@@ -40,4 +42,8 @@ class Toolbar extends React.Component {
   }
 }
 
-export default Toolbar
+export default connect(state => ({
+    theme: state.config.theme,
+}), dispatch => ({
+    //addNewCity: (info) => dispatch(addCity(info))
+}))(Toolbar);
