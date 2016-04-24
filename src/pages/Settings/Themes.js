@@ -25,7 +25,7 @@ class Settings extends React.Component {
   }
 
   render() {
-    const { onColorPress } = this.props;
+    const { currentTheme, onColorPress } = this.props;
     return(
       <View style={styles.containerDark}>
         <Toolbar
@@ -46,7 +46,7 @@ class Settings extends React.Component {
                         <Text style={styles.rowText}>{theme.name}</Text>
                       </View>
                       <View style={styles.rowRight}>
-                        {theme.arrow && (<Icon name="chevron-right" size={18} color="#7F7F7F" />)}
+                        {currentTheme === theme && (<Icon name={"check"} size={18} color={currentTheme.color} />)}
                       </View>
                     </View>
                   </TouchableHighlight>
@@ -61,7 +61,7 @@ class Settings extends React.Component {
 }
 
 export default connect(state => ({
-    theme: state.config.theme,
+    currentTheme: state.config.theme,
 }), dispatch => ({
     onColorPress:(theme) => dispatch(changeTheme(theme))
 

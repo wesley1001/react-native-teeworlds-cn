@@ -29,7 +29,7 @@ const localStyles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   rowText: {
-    color: '#000000',
+    color: '#4C4C4C',
     marginLeft: 8,
     //padding: 8,
   },

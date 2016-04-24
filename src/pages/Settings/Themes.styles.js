@@ -34,7 +34,7 @@ const localStyles = StyleSheet.create({
     marginRight: 16,
   },
   rowText: {
-    color: '#000000',
+    color: '#4C4C4C',
     //padding: 8,
   },
   rowLeft: {
