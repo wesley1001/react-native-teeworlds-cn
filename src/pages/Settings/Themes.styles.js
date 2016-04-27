@@ -3,7 +3,7 @@ import {
   //Dimensions,
 } from 'react-native';
 
-import globalStyles from '../styles';
+import globalStyles from '../../styles';
 //const {height, width} = Dimensions.get('window');
 
 const localStyles = StyleSheet.create({
@@ -18,8 +18,7 @@ const localStyles = StyleSheet.create({
   },
   rowButton: {
     paddingVertical: 16,
-    paddingLeft: 16,
-    paddingRight: 8,
+    paddingHorizontal: 16,
     borderColor: '#E5E5E5',
     backgroundColor: '#FFFFFF',
   },
@@ -28,10 +27,19 @@ const localStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  rowCircle: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    marginRight: 16,
+  },
   rowText: {
     color: '#4C4C4C',
-    marginLeft: 8,
     //padding: 8,
+  },
+  rowLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   rowRight: {
     flexDirection: 'row',
@@ -51,14 +59,6 @@ const localStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#BCBCBC',
   },
-  systemAction: {
-    flex: 1,
-  },
-  footerAction: {
-    flex: 1,
-    borderRadius: 3,
-    marginTop: 17,
-  }
 });
 export default {
   ...globalStyles,

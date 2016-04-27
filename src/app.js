@@ -68,7 +68,7 @@ export default class App extends React.Component {
     }
     return false;
   };
-  initialRoute = Router.pages.Splash;
+  initialRoute = Router.pages.Home;
   configureScene() {
     //return Navigator.SceneConfigs.FloatFromRight;
     // if (Platform.OS === 'ios') {

@@ -3,7 +3,6 @@ import {
 } from 'react-native';
 
 import globalStyles from '../styles';
-import theme from '../theme.js';
 
 const localStyles = StyleSheet.create({
   container: {

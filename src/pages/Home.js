@@ -4,9 +4,11 @@ import React, {
   ListView,
   Text,
   ToolbarAndroid,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
+var Icon = require('react-native-vector-icons/Ionicons');
 import styles from './Home.styles';
 import Toolbar from '../components/Toolbar.js';
 import AvatarCircle from '../components/AvatarCircle';
@@ -90,6 +92,17 @@ class Home extends React.Component {
           onEndReached={this.loadingNext.bind(this)}
           onEndReachedThreshold={320}>
         </ListView>
+        <View style={styles.footer}>
+          <TouchableOpacity sytle={styles.footerButton}>
+            <Icon name="navicon-round" size={20} color="#9D9D9D" />
+          </TouchableOpacity>
+          <TouchableOpacity sytle={styles.footerButton}>
+            <Icon name="compose" size={20} color="#9D9D9D" />
+          </TouchableOpacity>
+          <TouchableOpacity sytle={styles.footerButton}>
+            <Icon name="android-refresh" size={20} color="#9D9D9D" />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }

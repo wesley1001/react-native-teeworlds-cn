@@ -3,7 +3,7 @@ import {
 } from 'react-native';
 
 import globalStyles from '../styles';
-import theme from '../theme.js';
+import theme from '../themes.js';
 
 const localStyles = StyleSheet.create({
   toolbar: {
@@ -11,7 +11,7 @@ const localStyles = StyleSheet.create({
     alignItems: 'center',
     //paddingHorizontal: 32,
     //justifyContent: 'center',
-    backgroundColor: theme.toolbar ? theme.toolbar : theme[0].color,
+    //backgroundColor: theme.toolbar ? theme.toolbar : theme[0].color,
     height: 56,
   },
   left: {
